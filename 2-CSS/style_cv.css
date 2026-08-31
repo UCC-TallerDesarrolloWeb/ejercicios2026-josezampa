@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inconsolata:wght@200..900&display=swap');
+
+
+div {
+    border: 3px inset violet;
+    margin: 15px;
+    padding: 1em;
+    background-color: rgba(251, 178, 189, 0.399);
+    border-radius: 20px 100px 20px 20px;
+    box-shadow: 4px 8px rgba(128, 128, 128, 0.377);
+}
+
+#iconoUser {
+    width: 10%;
+    float: left;
+    border-radius: 100%;
+    padding-right: 1em;
+}
+
+body {
+    text-align: center;
+    background: linear-gradient(to left, rgb(255, 255, 255), pink);
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Bricolage Grotesque", sans-serif;
+}
+
+h1{ text-shadow: 1px 2px purple;}
+
+p {
+    font-family: "Inconsolata", monospace;
+}

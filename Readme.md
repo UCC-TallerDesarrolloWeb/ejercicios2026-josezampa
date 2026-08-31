@@ -33,8 +33,8 @@
 -  [x] Propiedades tipográficas
 -  [x] Incrustado
 -  [x] Estilo con Descendientes
--  [ ] Pseudo Clases
--  [ ] CV
+-  [x] Pseudo Clases
+-  [x] CV
 -  [ ] Backgrounds
 -  [ ] Position
 -  [ ] 2 Columnas
