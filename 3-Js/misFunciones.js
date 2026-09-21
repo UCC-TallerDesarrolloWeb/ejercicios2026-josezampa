@@ -32,3 +32,19 @@ function cambiarunidades(id, valor){
         document.lasunidades.unid_pie.value = 3.00*valor;
     }
 }
+
+
+function convertirgr(id){
+    var grad, rad;
+
+    if (id == "grados"){
+        grad = document.getelementbyid("grados").value;
+        rad = (grad*math.pi) / 180;
+    } else if(id == "radianes") {
+        rad = document.getelementbyid("radianes").value;
+        grad = (rad*180) / math.pi;
+    }
+
+    document.getelementbyid("grados").value = grad;
+    document.getelementbyid("radianes").value = rad;
+}
