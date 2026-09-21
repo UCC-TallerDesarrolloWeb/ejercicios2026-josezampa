@@ -36,19 +36,19 @@
 -  [x] Pseudo Clases
 -  [x] CV
 -  [x] Backgrounds
--  [ ] Position
--  [ ] 2 Columnas
--  [ ] Grid
--  [ ] grid-areas
--  [ ] Mejora
--  [ ] Transitions
--  [ ] Viewport
--  [ ] Responsive
+-  [x] Position
+-  [x] 2 Columnas
+-  [x] Grid
+-  [x] grid-areas
+-  [x] Mejora
+-  [x] Transitions
+-  [x] Viewport
+-  [x] Responsive
 
 ## Unidad 3: JavaScript y ES6+
 
--  [ ] Hola Mundo!
--  [ ] Conversor de Unidades
+-  [x] Hola Mundo!
+-  [x] Conversor de Unidades
 -  [ ] Documentación
 -  [ ] Grados a Radianes
 -  [ ] Refactorización
