@@ -70,11 +70,43 @@ let cargarProductos = () => {
                 <img src="images/${elemento.imagen}" alt="${elemento.nombre}">
                 <h3>${elemento.nombre}</h3>
                 <p>${elemento.precio}</p>
-                <button type="button" onclick="mostrarModal()">ver detalles</button>
+                <button type="button" onclick="mostrarModal(${id})">ver detalles</button>
+                <button type="button" onclick="agregarAlcarrito(${id})">agregar al carrito</button>
               </div>`
   });
 
   document.getElementById("mostrar-catalogo").innerHTML = contenido;
+}
+
+let agregarAlcarrito = (id) => {
+  let carritoList = localStorage.getItem("carrito");
+
+  if(carritoList == null){
+    carritoList = [];
+  } else {
+    carritoList = JSON.parse(carritoList);
+  }
+  carritoList.push(id);
+  console.log(carritoList);
+  localStorage.setItem("carrito", JSON.stringify(carritoList));
+}
+
+let cargarCarrito = () => {
+  let carritoList = localStorage.getItem("carrito");
+  let contenido = "";
+
+  if (carritoList == null){
+    contenido = "<div>su carrito está vacío</div>";
+  } else {
+    carritoList = JSON.parse(carritoList);
+    carritoList.forEach((num) => {
+      contenido += `<div>
+      <h3>${productos[num].nombre}</h3>
+      <p>${prodcutos[num].precio}</p></div>`;
+    })
+  }
+
+  document.getElementById("mostrar-carrito").innerHTML = contenido;
 }
 
 /**
@@ -82,7 +114,9 @@ let cargarProductos = () => {
  * @method mostrarModal
  * @return {void}
  */
-let mostrarModal = () => {
+let mostrarModal = (id) => {
+    document.getElementById("titulo-producto").innerText = productos[id].nombre;
+    document.getElementById("desc-producto").innerText = productos[id].description;
     document.getElementById("modal").style.display = 'block';
 }
 /**
