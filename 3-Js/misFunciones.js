@@ -58,19 +58,20 @@ function convertirgr(id){
 
 
 
-/** EJERCICIO DE REFACTORIZAR
+/**
  * conversion de unidades metros, pies, yardas, pulgadas
- * @method cambiarunidades
+ * @method cambiarUnidades
  * @param {string} id - id de los inputs
  * @param {number} valor - el valor de los inputs
- * @return nada 
+ * @return {void}
  */
-const convertirUnidades = (id, valor) => {
-
+const cambiarUnidades = (id, valor) => {
     let met, pul, pie, yar;
+
     if (typeof valor === "string" && valor.includes(",")) {
         valor = valor.replace(",", ".");
     }
+
     if (isNaN(valor) || valor === "") {
         alert("El valor ingresado es incorrecto");
         met = "";
@@ -88,13 +89,13 @@ const convertirUnidades = (id, valor) => {
         } else if (id === "pulgada") {
             met = valor * 0.0254;
             pul = valor;
-            pie = valor * 0.0833333; 
-            yar = valor * 0.0277778; 
+            pie = valor * 0.0833333;
+            yar = valor * 0.0277778;
         } else if (id === "pie") {
             met = valor * 0.3048;
             pul = valor * 12;
             pie = valor;
-            yar = valor * 0.333333;  
+            yar = valor * 0.333333;
         } else if (id === "yarda") {
             met = valor * 0.9144;
             pul = valor * 36;
@@ -107,6 +108,7 @@ const convertirUnidades = (id, valor) => {
         pie = Math.round(pie * 100) / 100;
         yar = Math.round(yar * 100) / 100;
     }
+
     document.lasUnidades.unid_metro.value = met;
     document.lasUnidades.unid_pulgada.value = pul;
     document.lasUnidades.unid_pie.value = pie;
@@ -131,51 +133,31 @@ function mostrar_ocultar(valorMO){
 }
 
 
-/**
- * muestra el elemento modal en la pagina
- * @method mostrarModal
- * @return {void}
- */
-let mostrarModal = () => {
-    document.getElementById("modal").style.display = 'block';
-}
-/**
- * oculta el elemento modal en la pagina
- * @method cerrarModal
- * @return {void}
- */
-let cerrarModal = () => {
-    document.getElementById("modal").style.display = 'none';
-}
-
-
-
-
 function calcularSuma() {
     var num1, num2;
     num1 = document.getElementsByName("sum_num1")[0].value;
     num2 = document.getElementsByName("sum_num2")[0].value;
 
-    document.getElementsByName("sum_total")[0].value = Number(num1) + Number(num2);
+    document.getElementsByName("sum_total")[0].innerHTML = Number(num1) + Number(num2);
 }
 function calcularResta() {
     var num1, num2;
     num1 = document.getElementsByName("res_num1")[0].value;
     num2 = document.getElementsByName("res_num2")[0].value;
 
-    document.getElementsByName("res_total")[0].value = Number(num1) - Number(num2);
+    document.getElementsByName("res_total")[0].innerHTML = Number(num1) - Number(num2);
 }
 function calcularMultiplicacion() {
     var num1, num2;
     num1 = document.getElementsByName("mul_num1")[0].value;
     num2 = document.getElementsByName("mul_num2")[0].value;
 
-    document.getElementsByName("mul_total")[0].value = Number(num1) * Number(num2);
+    document.getElementsByName("mul_total")[0].innerHTML = Number(num1) * Number(num2);
 }
 function calcularDivision() {
     var num1, num2;
     num1 = document.getElementsByName("div_num1")[0].value;
     num2 = document.getElementsByName("div_num2")[0].value;
 
-    document.getElementsByName("div_total")[0].value = Number(num1) / Number(num2);
+    document.getElementsByName("div_total")[0].innerHTML = Number(num1) / Number(num2);
 }

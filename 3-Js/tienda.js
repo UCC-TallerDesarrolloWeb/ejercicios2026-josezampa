@@ -61,3 +61,35 @@ const productos = [
     imagen: "protectores-manos.webp",
   },
 ];
+
+let cargarProductos = () => {
+  let contenido = "";
+  
+  productos.forEach((elemento, id) => {
+    contenido += `<div>
+                <img src="images/${elemento.imagen}" alt="${elemento.nombre}">
+                <h3>${elemento.nombre}</h3>
+                <p>${elemento.precio}</p>
+                <button type="button" onclick="mostrarModal()">ver detalles</button>
+              </div>`
+  });
+
+  document.getElementById("mostrar-catalogo").innerHTML = contenido;
+}
+
+/**
+ * muestra el elemento modal en la pagina
+ * @method mostrarModal
+ * @return {void}
+ */
+let mostrarModal = () => {
+    document.getElementById("modal").style.display = 'block';
+}
+/**
+ * oculta el elemento modal en la pagina
+ * @method cerrarModal
+ * @return {void}
+ */
+let cerrarModal = () => {
+    document.getElementById("modal").style.display = 'none';
+}

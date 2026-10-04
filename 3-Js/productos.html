@@ -4,10 +4,10 @@
 <head>
     <title>Catalogo de productos</title>
     <link href="catalogo.css" type="text/css" rel="stylesheet">
-    <script type="text/javascript" src="misFunciones.js"></script>
+    <script type="text/javascript" src="tienda.js"></script>
 </head>
 
-<body>
+<body onload="cargarProductos()">
     <div class="grid-container">
         <header class="item1">
             Catalogo productos
@@ -55,43 +55,15 @@
             </form>
             Filtros
         </aside>
-        <main class="item4">
         <dialog id="modal">
             <h2>detalle del producto</h2>
             <h3>cabezal cerrado</h3>
             <p>cabezal de sparing. disponible del talle 1 al 3. color azul y rojo</p>
             <button type="button" onclick="cerrarModal()">cerrar</button>
         </dialog>
-            <div>
-                <img src=" https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/cabezal-cerrado.webp"
-                    alt="Cabezal cerrado">
-                <h3>Cabezal cerrado</h3>
-                <button type="button" onclick="mostrarModal()">ver detalles</button>
-            </div>
-            <div>
-                <img src=" https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/dobok.webp" alt="DObok">
-                <h3>Dobok</h3>
-            </div>
-            <div>
-                <img src=" https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/escudo-potencia.webp"
-                    alt="Escudo potencia">
-                <h3>Escudo potencia</h3>
-            </div>
-            <div>
-                <img src=" https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/foco-con-dedos.webp"
-                    alt="Foco con dedos">
-                <h3>Foco con dedos</h3>
-            </div>
-            <div>
-                <img src=" https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/protectores-manos.webp"
-                    alt="Protectores manos">
-                <h3>Protectores manos</h3>
-            </div>
-            <div>
-                <img src=" https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/protectores-pie.webp"
-                    alt="Protectores pie">
-                <h3>Protectores pie</h3>
-            </div>
+        <main class="item4" id="mostrar-catalogo">
+        
+            
     </div>
     </main>
     <footer class="item5">
