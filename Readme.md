@@ -10,7 +10,7 @@
 
 ## Unidad 1: Introducción y Herramientas de Desarrollo
 -  [x] Readme.md
--  [ ] .gitignore
+-  [x] .gitignore
 
 ## Unidad 2: Fundamentos de HTML5 y CSS3
 
@@ -27,7 +27,7 @@
 -  [x] Comentarios
 -  [x] Formulario
 -  [x] Accesibilidad
--  [ ] Multimedia
+-  [x] Multimedia
 
 ### CSS
 -  [x] Propiedades tipográficas
@@ -60,7 +60,7 @@
 -  [x] Renderizado Dinámico
 -  [x] Renderizado Dinámico del Dialog
 -  [x] Carrito de Compras con localstorage
--  [ ] Vaciar Carrito y Eliminar Producto
+-  [x] Vaciar Carrito y Eliminar Producto
 -  [ ] Filter
 -  [ ] Formatear Precio
 -  [ ] Total y Cantidad de Productos
