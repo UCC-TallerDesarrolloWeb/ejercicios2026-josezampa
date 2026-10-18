@@ -62,10 +62,10 @@ const productos = [
   },
 ];
 
-let cargarProductos = () => {
+let cargarProductos = (prod = productos) => {
   let contenido = "";
   
-  productos.forEach((elemento, id) => {
+  prod.forEach((elemento, id) => {
     contenido += `<div>
                 <img src="images/${elemento.imagen}" alt="${elemento.nombre}">
                 <h3>${elemento.nombre}</h3>
@@ -149,4 +149,26 @@ let mostrarModal = (id) => {
  */
 let cerrarModal = () => {
     document.getElementById("modal").style.display = 'none';
+}
+
+let filtrarProductos = () => {
+  let searchWord = document.getElementById("search").value;
+  let min = document.getElementById("min").value;
+  let max = document.getElementById("max").value;
+  let marca = document.getElementById("marca").value;
+
+  let prot = document.getElementById("protectores").checked;
+  let entr = document.getElementById("entrenamiento").checked;
+  let dob = document.getElementById("dobok").checked;
+
+  let newLista = productos;
+
+  if (searchWord){
+    newLista = newLista.filter((prod) => 
+      prod.nombre.toLowerCase().includes(searchWord.toLowerCase()) ||
+      prod.description.toLowerCase().includes(searchWord.toLowerCase())
+  )
+  }
+
+  cargarProductos(newLista);
 }
