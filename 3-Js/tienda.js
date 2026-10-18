@@ -102,11 +102,12 @@ let cargarCarrito = () => {
     carritoList.forEach((num, id) => {
       contenido += `<div>
       <h3>${productos[num].nombre}</h3>
-      <p>${prodcutos[num].precio}</p>
+      <p>${productos[num].precio}</p>
       <button type="button" onClick="eliminarProducto(${id})">eliminar producto</button>
       </div>`;
-      contenido += `<button type="button" onClick="vaciarCarrito()">vaciar carrito</button>`
+      
     })
+    contenido += `<button type="button" onClick="vaciarCarrito()">vaciar carrito</button>`
   }
   
   document.getElementById("mostrar-carrito").innerHTML = contenido;
@@ -122,7 +123,7 @@ let eliminarProducto = (id) => {
   carritoList = JSON.parse(carritoList);
   carritoList.splice(id, 1);
 
-  if(carritoList.lenght > 0){
+  if(carritoList.lengh > 0){
     localStorage.setItem("carrito", JSON.stringify(carritoList));
   }else{
     localStorage.removeItem("carrito");
