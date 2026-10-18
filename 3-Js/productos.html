@@ -29,11 +29,11 @@
                     <legend>Precios></legend>
                     <p>
                         <label for="Minimo">Minimo</label>
-                        <input type="number" id="minimo" name="precio-min" min="0" onchange="filtrarProductos()">
+                        <input type="number" id="price-min" name="price-min" min="0" onchange="filtrarProductos()">
                     </p>
                     <p>
                         <label for="price-max">Maximo</label>
-                        <input type="number" name="Maximo" onchange="filtrarProductos()">
+                        <input type="number" id="price-max" name="price-max" onchange="filtrarProductos()">
                     </p>
                 </fieldset>
 
@@ -41,22 +41,22 @@
                     <legend>Marca</legend>
                     <select id="marca" onchange="filtrarProductos()">
                         <option value="todas">todas</option>
-                        <option value="gran-marc">gran marc</option>
-                        <option value="daedo">daedo</option>
+                        <option value="Gran Marc">Gran Marc</option>
+                        <option value="Daedo">Daedo</option>
                     </select>
                 </fieldset>
 
                 <fieldset>
                     <legend>Tipo de productos</legend>
                     <p>
-                        <input type="checkbox" id=" protectores " name="tipo " value=" protectortes" onchange="filtrarProductos()">
+                        <input type="checkbox" id="protectores" name="tipo " value=" protectortes" onchange="filtrarProductos()">
                         <label for="protectores">Protectores</label>
 
-                        <input type="checkbox" id=" entrenamiento " name="tipo " value=" entrenamiento" onchange="filtrarProductos()">
-                        <label for="entrenamiento">entrenamiento</label>
+                        <input type="checkbox" id="entrenamiento" name="tipo " value=" entrenamiento" onchange="filtrarProductos()">
+                        <label for="entrenamiento">Entrenamiento</label>
 
                         <input type="checkbox" id="dobok" name="tipo " value="dobok" onchange="filtrarProductos()">
-                        <label for="dobok">dobok</label>
+                        <label for="dobok">Dobok</label>
 
 
 

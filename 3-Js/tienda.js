@@ -153,8 +153,8 @@ let cerrarModal = () => {
 
 let filtrarProductos = () => {
   let searchWord = document.getElementById("search").value;
-  let min = document.getElementById("min").value;
-  let max = document.getElementById("max").value;
+  let min = document.getElementById("price-min").value;
+  let max = document.getElementById("price-max").value;
   let marca = document.getElementById("marca").value;
 
   let prot = document.getElementById("protectores").checked;
@@ -168,6 +168,27 @@ let filtrarProductos = () => {
       prod.nombre.toLowerCase().includes(searchWord.toLowerCase()) ||
       prod.description.toLowerCase().includes(searchWord.toLowerCase())
   )
+  }
+
+  if(min){
+    newLista = newLista.filter((prod) => prod.precio >= min);
+  }  
+
+  if(max){
+    newLista = newLista.filter((prod) => prod.precio <= max);
+  }  
+
+  if(marca != "todas"){
+    newLista = newLista.filter((prod) => prod.marca === marca);
+  }
+
+  let category = [];
+  prot ? category.push("Protectores") : "";
+  entr ? category.push("Entrenamiento") : "";
+  dob ? category.push("Dobok") : "";
+
+  if(category.length > 0) {
+    newLista = newLista.filter((prod) => category.includes(prod.categoria));
   }
 
   cargarProductos(newLista);
