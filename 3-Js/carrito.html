@@ -7,7 +7,7 @@
     <script type="text/javascript" src="tienda.js"></script>
 </head>
 
-<body onload="cargarCarrito()">
+<body onload="cargarCarrito();contarProductos()">
     <div class="grid-container">
         <header class="item1">
             Catalogo productos
@@ -15,8 +15,7 @@
         <nav class="item2">
             <a href="productos.html">Catalogo</a>
             <a href="carrito.html">Carrito de compras</a>
-
-            Links de navegacion
+            <div id="cant-prod">0</div>
         </nav>
 
         <main class="item4" id="mostrar-carrito">
