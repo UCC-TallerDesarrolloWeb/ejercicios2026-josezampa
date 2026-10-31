@@ -1,0 +1,27 @@
+.caja h2 {
+  color: rgb(116, 233, 116);
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.caja p {
+  color: rgb(116, 233, 116);
+}
+
+body {
+  background: rgb(253, 224, 224);
+}
+
+.caja {
+  background-color: white;
+  border: 4px solid black;
+  box-shadow: 0 0 2px black;
+  margin: 20px;
+}
+
+.caja-secundaria {
+  background-color: blue;
+  border: 4px solid black;
+  box-shadow: 0 0 2px black;
+  margin: 20px;
+}
+
+/*# sourceMappingURL=estilos.css.map */

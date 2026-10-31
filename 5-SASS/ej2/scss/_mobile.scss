@@ -1,0 +1,26 @@
+@media (max-width: 700px){
+    #navbar{
+        .container{
+            flex-direction: column;
+        }
+
+        ul{
+            li{
+                margin-left: 15px;
+                padding: 15px;
+            }
+        }
+    }
+
+    #features{
+    .container{
+        display: grid;
+        padding: 20px 0;
+        grid-template-columns: repeat(1, 1fr);
+
+        img{
+            width: 100%;
+        }
+    }
+}
+}
