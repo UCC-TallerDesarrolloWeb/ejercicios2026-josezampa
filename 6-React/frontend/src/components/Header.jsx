@@ -13,14 +13,14 @@ const Header = () => {
         <header>
             <h1>GIMNASIO</h1>
             <nav>
-                <a href="/">home</a>
+                <a href="/">Home</a>
                 { isLoggedIn ? (
                     <button onClick={logout}>cerrar sesion</button>
                 ):(
-                    <a href="/Login">login</a>
+                    <a href="/Login">Login</a>
                 )}
                 
-                <a href="/Actividades">actividades</a>
+                <a href="/Actividades">Actividades</a>
             </nav>
         </header>
     )
