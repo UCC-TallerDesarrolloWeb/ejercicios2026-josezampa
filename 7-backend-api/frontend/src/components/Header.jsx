@@ -21,6 +21,7 @@ const Header = () => {
                 )}
                 
                 <a href="/Actividades">Actividades</a>
+                <a href="/poke">Poke</a>
             </nav>
         </header>
     )
