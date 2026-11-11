@@ -97,7 +97,7 @@
 -  [x] Mock del Backend
 -  [x] Análisis de Pokeapi
 -  [x] APIs en React
--  [ ] APIs en React
+-  [x] APIs en React
 -  [ ] Carrito
 
 ## Unidad 8: Buenas prácticas en los desarrollos web
